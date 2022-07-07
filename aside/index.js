@@ -45,3 +45,12 @@ const energyCostDollars = energyCostEuros.map((el) => el * exchangeRate);
 
 console.log(energyCostDollars);
 */
+
+// Aside: new Array constructor and Array.fill()
+/*
+const coins = new Array(10).fill("🪙");
+console.log(coins);
+
+const poisonMushrooms = new Array(1000).fill("🍄");
+console.log(poisonMushrooms);
+*/
