@@ -1,3 +1,37 @@
+function getDiceRollArray(diceCount) {
+  return (newDiceRolls = new Array(diceCount)
+    .fill(0)
+    .map((num) => (num = Math.floor(Math.random() * 6) + 1)));
+}
+
+function getDiceHtml(diceCount) {
+  return getDiceRollArray(diceCount)
+    .map((num) => `<div class="dice">${num}</div>`)
+    .join("");
+}
+
+function Character(data) {
+  this.elementId = data.elementId;
+  this.name = data.name;
+  this.avatar = data.avatar;
+  this.health = data.health;
+  this.diceCount = data.diceCount;
+
+  this.getCharacterHtml = function () {
+    const { elementId, name, avatar, health, diceCount } = this;
+    const diceHtml = getDiceHtml(this.diceCount);
+
+    document.getElementById(`${elementId}`).innerHTML = `
+    <div class="character-card">
+        <h4 class="name">${name}</h4>
+        <img class="avatar" src=${avatar} />
+        <p class="health">health: <b> ${health} </b></p>
+        <div class="dice-container">${diceHtml}</div>
+    </div>
+`;
+  };
+}
+
 const hero = {
   elementId: "hero",
   name: "Wizard",
@@ -14,30 +48,8 @@ const monster = {
   diceCount: 1,
 };
 
-function getDiceRollArray(diceCount) {
-  return (newDiceRolls = new Array(diceCount)
-    .fill(0)
-    .map((num) => (num = Math.floor(Math.random() * 6) + 1)));
-}
+const wizard = new Character(hero);
+const orc = new Character(monster);
 
-function getDiceHtml(diceCount) {
-  return getDiceRollArray(diceCount)
-    .map((num) => `<div class="dice">${num}</div>`)
-    .join("");
-}
-
-function renderCharacter(data) {
-  const { elementId, name, avatar, health, diceCount } = data;
-
-  document.getElementById(`${elementId}`).innerHTML = `
-    <div class="character-card">
-        <h4 class="name">${name}</h4>
-        <img class="avatar" src=${avatar} />
-        <p class="health">health: <b> ${health} </b></p>
-        <div class="dice-container">${getDiceHtml(diceCount)}</div>
-    </div>
-`;
-}
-
-renderCharacter(hero);
-renderCharacter(monster);
+wizard.getCharacterHtml();
+orc.getCharacterHtml();
