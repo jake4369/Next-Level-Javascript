@@ -14,3 +14,5 @@ const characterData = {
     diceCount: 1,
   },
 };
+
+export default characterData;
