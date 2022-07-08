@@ -117,6 +117,7 @@ console.log(leopardMansionHotel);
 */
 
 // Aside: Methods on constructor functions
+/*
 const animalForRelease1 = {
   name: "Tilly",
   species: "tiger",
@@ -151,3 +152,43 @@ const nellyTheElephant = new Animal(animalForRelease2);
 
 tillyTheTiger.summeriseAnimal();
 nellyTheElephant.summeriseAnimal();
+*/
+
+// Aside: Methods on constructor functions challenge
+const hotel1 = {
+  name: "Safari View",
+  rooms: 30,
+  stars: "⭐⭐⭐⭐⭐",
+  costPerNightAdult: 240,
+  costPerNightChild: 180,
+};
+
+const hotel2 = {
+  name: "Leopard Mansion",
+  rooms: 96,
+  stars: "⭐⭐⭐",
+  costPerNightAdult: 120,
+  costPerNightChild: 180,
+};
+
+function NationalParkHotels(data) {
+  this.name = data.name;
+  this.rooms = data.rooms;
+  this.stars = data.stars;
+  this.costPerNightAdult = data.costPerNightAdult;
+  this.costPerNightChild = data.costPerNightChild;
+
+  this.summeriseHotel = function () {
+    let price = 2 * this.costPerNightAdult + 2 * this.costPerNightChild;
+
+    console.log(
+      `A one night stay at the ${this.name} for two adults and two children costs a total of £${price}`
+    );
+  };
+}
+
+const safariView = new NationalParkHotels(hotel1);
+const leopardManor = new NationalParkHotels(hotel2);
+
+safariView.summeriseHotel();
+leopardManor.summeriseHotel();
