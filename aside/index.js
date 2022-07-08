@@ -155,6 +155,7 @@ nellyTheElephant.summeriseAnimal();
 */
 
 // Aside: Methods on constructor functions challenge
+/*
 const hotel1 = {
   name: "Safari View",
   rooms: 30,
@@ -192,3 +193,28 @@ const leopardManor = new NationalParkHotels(hotel2);
 
 safariView.summeriseHotel();
 leopardManor.summeriseHotel();
+*/
+
+// Aside: Object.assign
+/*
+const studentDetails = {
+  firstName: "janaka",
+  lastName: "siriwardena",
+  age: 28,
+  country: "sri lanka",
+  email: "j.siri@totalinternet.com",
+  discordUsername: "JS1",
+};
+
+function Student(data) {
+  Object.assign(this, data);
+  this.summariseStudent = function () {
+    console.log(
+      `${this.firstName} ${this.lastName} is ${this.age} years old and comes from ${this.country}. Their email is ${this.email} and you can find them on discord as ${this.discordUsername}`
+    );
+  };
+}
+
+const newStudent = new Student(studentDetails);
+newStudent.summariseStudent();
+*/
