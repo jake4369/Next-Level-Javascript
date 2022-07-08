@@ -47,8 +47,12 @@ function Character(data) {
   };
 }
 
-const wizard = new Character(hero);
-document.getElementById("hero").innerHTML = wizard.getCharacterHtml();
+function render() {
+  document.getElementById("hero").innerHTML = wizard.getCharacterHtml();
+  document.getElementById("monster").innerHTML = orc.getCharacterHtml();
+}
 
+const wizard = new Character(hero);
 const orc = new Character(monster);
-document.getElementById("monster").innerHTML = orc.getCharacterHtml();
+
+render();
