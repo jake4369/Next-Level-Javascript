@@ -56,6 +56,7 @@ console.log(poisonMushrooms);
 */
 
 // Aside: Constructor functions
+/*
 const animalForRelease1 = {
   name: "Tilly",
   species: "tiger",
@@ -83,3 +84,32 @@ const tillyTheTiger = new Animal(animalForRelease1);
 const nellyTheElephant = new Animal(animalForRelease2);
 console.log(tillyTheTiger);
 console.log(nellyTheElephant);
+*/
+
+// Aside: Constructor functions challenge
+const hotel1 = {
+  name: "Safari View",
+  rooms: 30,
+  stars: "⭐⭐⭐⭐⭐",
+  costPerNightAdult: "240",
+};
+
+const hotel2 = {
+  name: "Leopard Mansion",
+  rooms: 96,
+  stars: "⭐⭐⭐",
+  costPerNightAdult: "120",
+};
+
+function NationParkHotels(data) {
+  this.name = data.name;
+  this.rooms = data.rooms;
+  this.stars = data.stars;
+  this.costPerNightAdult = data.costPerNightAdult;
+}
+
+const safariViewHotel = new NationParkHotels(hotel1);
+const leopardMansionHotel = new NationParkHotels(hotel2);
+
+console.log(safariViewHotel);
+console.log(leopardMansionHotel);
