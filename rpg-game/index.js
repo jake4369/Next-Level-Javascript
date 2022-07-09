@@ -7,7 +7,7 @@ function render() {
 }
 
 function attack() {
-  console.log("Attack button working");
+  render();
 }
 
 document.getElementById("attack-button").addEventListener("click", attack);
