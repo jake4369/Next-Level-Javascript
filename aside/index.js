@@ -334,7 +334,7 @@ console.log(distanceTraveledKm);
 */
 
 // Aside: setTimeout
-
+/*
 const question = "What is the capital of Peru?";
 const answer = "Lima!";
 
@@ -346,3 +346,20 @@ setTimeout(revealAnswer, 3000);
 function revealAnswer() {
   console.log(answer);
 }
+*/
+
+// Aside: setTimeout challenge
+
+console.log(`Once upon a time, a beautiful princess met a handsome prince.`); //1
+setTimeout(
+  () => console.log(`In the end, they lived happily ever after.`),
+  1500
+); //5
+console.log(
+  `The princess's wicked stepmother put a curse on them before they could marry.`
+); //2
+setTimeout(
+  () => console.log(`They got married on a beautiful summer's day.`),
+  1000
+); // 4
+console.log(`The prince found a friendly wizard to lift the curse.`); // 3
