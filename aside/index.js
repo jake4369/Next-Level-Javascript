@@ -254,8 +254,22 @@ console.log(totalRainfall);
 */
 
 // Aside: array.reduce() challenge
+/*
 const grades = [75, 83, 66, 43, 55, 99, 87, 16, 89, 64, 70, 80, 94, 77, 66, 73];
 
 const averageGrade = grades.reduce((acc, cur) => acc + cur, 0) / grades.length;
 
 console.log(`The class average is ${averageGrade}`);
+*/
+
+// Aside: The Ternary Operator
+const exerciseTimeMins = 20;
+
+const message =
+  exerciseTimeMins < 30
+    ? "You need to try harder!"
+    : exerciseTimeMins < 60
+    ? "Doing good!"
+    : "Excellent";
+
+console.log(message);
