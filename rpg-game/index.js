@@ -18,8 +18,10 @@ function attack() {
     endGame();
   } else if (monster.dead) {
     if (monstersArray) {
-      monster = getNewMonster();
-      render();
+      setTimeout(() => {
+        monster = getNewMonster();
+        render();
+      }, 1500);
     } else {
       endGame();
     }
