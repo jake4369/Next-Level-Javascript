@@ -319,6 +319,7 @@ console.log(speedWarning(50, 40));
 */
 
 // Aside: inline arrow function challenge
+/*
 const distanceTraveledMiles = [267, 345, 234, 190, 299];
 
 // const distanceTraveledKm = distanceTraveledMiles.map(function(distance){
@@ -330,3 +331,18 @@ distanceTraveledKm = distanceTraveledMiles.map((distance) =>
 );
 
 console.log(distanceTraveledKm);
+*/
+
+// Aside: setTimeout
+
+const question = "What is the capital of Peru?";
+const answer = "Lima!";
+
+console.log(question);
+
+// setTimeout(()=> console.log(answer), 3000)
+setTimeout(revealAnswer, 3000);
+
+function revealAnswer() {
+  console.log(answer);
+}
