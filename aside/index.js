@@ -246,7 +246,16 @@ sandraKaye.summariseDev();
 */
 
 // Aside: array.reduce()
+/*
 const rainJanuaryByWeek = [10, 20, 0, 122];
 
 const totalRainfall = rainJanuaryByWeek.reduce((acc, cur) => acc + cur, 0);
 console.log(totalRainfall);
+*/
+
+// Aside: array.reduce() challenge
+const grades = [75, 83, 66, 43, 55, 99, 87, 16, 89, 64, 70, 80, 94, 77, 66, 73];
+
+const averageGrade = grades.reduce((acc, cur) => acc + cur, 0) / grades.length;
+
+console.log(`The class average is ${averageGrade}`);
