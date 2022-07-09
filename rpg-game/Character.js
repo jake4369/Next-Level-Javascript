@@ -13,6 +13,11 @@ function Character(data) {
       .join(" ");
   };
 
+  this.takeDamage = function (attackScoreArray) {
+    // attackScoreArray = attackScoreArray.reduce((acc, cur) => acc + cur, 0);
+    console.log(`${this.name} took ${attackScoreArray} damage`);
+  };
+
   this.getCharacterHtml = function () {
     const { elementId, name, avatar, health, diceCount } = this;
 
