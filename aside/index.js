@@ -287,7 +287,7 @@ console.log(message);
 */
 
 // Aside: Arrow functions
-
+/*
 // function alertSpend(amount){
 // 	return `Warning! You just spent £${amount}!`
 // }
@@ -299,3 +299,20 @@ const alertSpend = (amount) => {
 };
 
 console.log(alertSpend(100));
+*/
+
+// Aside: Arrow functions challenge
+
+// function speedWarning(speed){
+//   return `You are going at ${speed} mph!`
+// }
+
+// speedWarning = (speed) => `You are going at ${speed} mph!`;
+
+const speedWarning = (speedLimit, speed) => {
+  if (speed > speedLimit) {
+    return `You are going at ${speed} mph!`;
+  }
+};
+
+console.log(speedWarning(50, 40));
