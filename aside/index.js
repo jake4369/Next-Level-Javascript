@@ -277,9 +277,25 @@ console.log(message);
 */
 
 // Aside: Ternary Operator challenge
+/*
 const playerGuess = 3;
 const correctAnswer = 6;
 
 const message = playerGuess === correctAnswer ? "Correct!" : "Wrong!";
 
 console.log(message);
+*/
+
+// Aside: Arrow functions
+
+// function alertSpend(amount){
+// 	return `Warning! You just spent £${amount}!`
+// }
+
+const alertSpend = (amount) => {
+  if (amount > 50) {
+    return `Warning! You just spent £${amount}!`;
+  }
+};
+
+console.log(alertSpend(100));
