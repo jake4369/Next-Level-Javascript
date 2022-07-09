@@ -231,7 +231,7 @@ const sandraKayeProfileData = {
 Challenge
 1. Use Object.assign to cut 4 lines of code from the constructor function.
 */
-
+/*
 function DevProfile(data) {
   Object.assign(this, data);
   this.summariseDev = function () {
@@ -243,3 +243,10 @@ function DevProfile(data) {
 
 const sandraKaye = new DevProfile(sandraKayeProfileData);
 sandraKaye.summariseDev();
+*/
+
+// Aside: array.reduce()
+const rainJanuaryByWeek = [10, 20, 0, 122];
+
+const totalRainfall = rainJanuaryByWeek.reduce((acc, cur) => acc + cur, 0);
+console.log(totalRainfall);
