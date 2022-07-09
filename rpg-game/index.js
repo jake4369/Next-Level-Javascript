@@ -6,6 +6,12 @@ function render() {
   document.getElementById("monster").innerHTML = orc.getCharacterHtml();
 }
 
+function attack() {
+  console.log("Attack button working");
+}
+
+document.getElementById("attack-button").addEventListener("click", attack);
+
 const wizard = new Character(characterData.hero);
 const orc = new Character(characterData.monster);
 
