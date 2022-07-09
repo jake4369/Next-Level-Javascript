@@ -263,6 +263,7 @@ console.log(`The class average is ${averageGrade}`);
 */
 
 // Aside: The Ternary Operator
+/*
 const exerciseTimeMins = 20;
 
 const message =
@@ -271,5 +272,14 @@ const message =
     : exerciseTimeMins < 60
     ? "Doing good!"
     : "Excellent";
+
+console.log(message);
+*/
+
+// Aside: Ternary Operator challenge
+const playerGuess = 3;
+const correctAnswer = 6;
+
+const message = playerGuess === correctAnswer ? "Correct!" : "Wrong!";
 
 console.log(message);
