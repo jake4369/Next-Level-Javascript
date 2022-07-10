@@ -220,12 +220,12 @@ newStudent.summariseStudent();
 */
 
 // Aside: Object.assign challenge
-const sandraKayeProfileData = {
-  name: "Sandra Kaye",
-  portfolio: "www.sandrasportfolio.com",
-  currentJob: "Google",
-  currentSalary: "400k",
-};
+// const sandraKayeProfileData = {
+//   name: "Sandra Kaye",
+//   portfolio: "www.sandrasportfolio.com",
+//   currentJob: "Google",
+//   currentSalary: "400k",
+// };
 
 /*
 Challenge
@@ -349,7 +349,7 @@ function revealAnswer() {
 */
 
 // Aside: setTimeout challenge
-
+/*
 console.log(`Once upon a time, a beautiful princess met a handsome prince.`); //1
 setTimeout(
   () => console.log(`In the end, they lived happily ever after.`),
@@ -363,3 +363,16 @@ setTimeout(
   1000
 ); // 4
 console.log(`The prince found a friendly wizard to lift the curse.`); // 3
+*/
+
+// Aside: Classes 1
+class Module {
+  constructor() {
+    this.coursename = "Learn JS";
+    this.studentsEnrolled = 5600;
+    this.studentsCompleted = 5100;
+  }
+}
+
+const learnJs = new Module();
+console.log(learnJs.coursename);
