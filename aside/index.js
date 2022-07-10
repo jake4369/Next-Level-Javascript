@@ -366,6 +366,7 @@ console.log(`The prince found a friendly wizard to lift the curse.`); // 3
 */
 
 // Aside: Classes 1
+/*
 class Module {
   constructor() {
     this.coursename = "Learn JS";
@@ -376,3 +377,39 @@ class Module {
 
 const learnJs = new Module();
 console.log(learnJs.coursename);
+*/
+
+// Aside: Classes 2
+
+const moduleStats = {
+  module1: {
+    moduleName: "Learn JS",
+    studentsEnrolled: 2340,
+    studentsCompleted: 2210,
+  },
+  module2: {
+    moduleName: "CSS Basics",
+    studentsEnrolled: 1893,
+    studentsCompleted: 1810,
+  },
+  module3: {
+    moduleName: "Responsive Design",
+    studentsEnrolled: 4600,
+    studentsCompleted: 4357,
+  },
+};
+
+class Module {
+  constructor(data) {
+    Object.assign(this, data);
+    this.percentCompletedModule =
+      (this.studentsCompleted / this.studentsEnrolled) * 100;
+  }
+
+  logpercentCompletedModule() {
+    console.log(this.percentCompletedModule);
+  }
+}
+
+const responsiveDesign = new Module(moduleStats.module3);
+responsiveDesign.logpercentCompletedModule();
